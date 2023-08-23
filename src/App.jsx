@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import TootTip from "./components/TooltipCustomizationForm/tooltipCustomizationForm";
 function App() {
   const [objNum, setobjNum] = useState(4);
   const [toolTipsText, setToolTipsText] = useState('');
@@ -38,6 +38,16 @@ function App() {
 
   return (
     <div className="App">
+      <TootTip 
+      upToolTipsText={upToolTipsText}
+      upTextSize={upTextSize}
+      upPadding={upPadding}
+      upStyle={upStyle}
+      upCornerRadius={upCornerRadius}
+      upTooltipWidth={upTooltipWidth}
+      upArrowWidth={upArrowWidth}
+      upArrowHeight={upArrowHeight}
+       ></TootTip>
     </div>
   );
 }
