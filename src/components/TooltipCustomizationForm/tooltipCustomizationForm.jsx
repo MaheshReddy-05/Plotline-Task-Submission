@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 export default function TooltipCustomizationForm({
+  upObjNum,
   upToolTipsText,
   upTextSize,
   upPadding,
@@ -19,9 +20,27 @@ export default function TooltipCustomizationForm({
   const [tooltipWidth, setTooltipWidth] = useState(3);
   const [arrowWidth, setArrowWidth] = useState(3);
   const [arrowHeight, setArrowHeight] = useState(3);
-  const [selectedOption, setSelectedOption] = useState("");
   const options = ["Button 1", "Button 2", "Button 3", "Button 4", "Button 5"];
-  const select = selectedOption || "Select an option";
+  const [select, setselect] = useState("Choose One");
+
+  function handleObjNum(select){
+    const curr = select;
+    if(curr==="Button 1"){
+      upObjNum(0);
+    }
+    else if(curr==="Button 2"){
+      upObjNum(1);
+    }
+    else if(curr==="Button 3"){
+      upObjNum(2);
+    }
+    else if(curr==="Button 4"){
+      upObjNum(3);
+    }
+    else if(curr==="Button 5"){
+      upObjNum(4);
+    }
+  }
 
   function handleToolTipsText(event) {
     const newText = event.target.value;
@@ -123,7 +142,8 @@ export default function TooltipCustomizationForm({
                   key={option}
                   onClick={() => {
                     setIsActive(false);
-                    setSelectedOption(option);
+                    handleObjNum(option);
+                    setselect(option);
                   }}
                   className="dropdown-item"
                 >

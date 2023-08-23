@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import TootTip from "./components/TooltipCustomizationForm/tooltipCustomizationForm";
+import ButtonWithTooltip from './components/ButtonWithTooltip/buttonWithTooltip';
 function App() {
-  const [objNum, setobjNum] = useState(4);
+  const [objNum, setobjNum] = useState(0);
   const [toolTipsText, setToolTipsText] = useState('');
   const [textSize, setTextSize] = useState(14);
   const [padding, setPadding] = useState(5);
@@ -11,6 +12,9 @@ function App() {
   const [arrowWidth, setArrowWidth] = useState(3);
   const [arrowHeight, setArrowHeight] = useState(3);
 
+  function upObjNum(num){
+    setobjNum(num);
+  }
   function upToolTipsText(text) {
     setToolTipsText(text);
   }
@@ -39,6 +43,7 @@ function App() {
   return (
     <div className="App">
       <TootTip 
+      upObjNum = {upObjNum}
       upToolTipsText={upToolTipsText}
       upTextSize={upTextSize}
       upPadding={upPadding}
@@ -48,6 +53,19 @@ function App() {
       upArrowWidth={upArrowWidth}
       upArrowHeight={upArrowHeight}
        ></TootTip>
+      <ButtonWithTooltip
+      objNum={objNum}
+      toolTipsText={toolTipsText}
+      textSize={textSize}
+      padding={padding}
+      style={style}
+      cornerRadius={cornerRadius}
+      tooltipWidth={tooltipWidth}
+      arrowWidth={arrowWidth}
+      arrowHeight={arrowHeight}
+      >
+
+      </ButtonWithTooltip>
     </div>
   );
 }
