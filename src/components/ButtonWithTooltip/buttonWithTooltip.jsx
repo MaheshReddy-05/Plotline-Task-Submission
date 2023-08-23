@@ -30,7 +30,6 @@ export default function buttonWithTooltip({
         {toolTipsText}
       </div>
     <button >Button2</button>
-    <h2>{objNum}</h2>
     <div className="tooltip" style={check(objNum,1)}>
         {toolTipsText}
       </div>
