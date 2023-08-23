@@ -14,8 +14,6 @@ export default function TooltipCustomizationForm({
   const [toolTipsText, setToolTipsText] = useState("");
   const [textSize, setTextSize] = useState(14);
   const [padding, setPadding] = useState(5);
-//   const [textColor, setTextColor] = useState("");
-//   const [backgroundColor, setBackgroundColor] = useState("");
   const [style, setStyle] = useState({});
   const [cornerRadius, setCornerRadius] = useState(3);
   const [tooltipWidth, setTooltipWidth] = useState(3);
@@ -143,14 +141,20 @@ export default function TooltipCustomizationForm({
           <label>Padding</label>
           <input type="text" value={padding} onChange={handlePadding} />
         </div>
-        {/* <label>Text Colour</label>
-        <input type="text" value={textColor} onChange={handleTextColor} />
+        <label>Text Colour</label>
+        <input
+                type="color"
+                id="customTooltipTextColor"
+                value={style.color || ''}
+                onChange={handleTextColor}
+            />
         <label>Background colour</label>
         <input
-          type="text"
-          value={backgroundColor}
-          onChange={handleBackgroundColor}
-        /> */}
+                type="color"
+                id="customTooltipBackgroundColor"
+                value={style.backgroundColor || ''}
+                onChange={handleBackgroundColor}
+            />
         <div>
           <label>Corner radius</label>
           <input
