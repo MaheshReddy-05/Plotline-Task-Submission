@@ -1,0 +1,62 @@
+.circular-box {
+  border: 15px solid black;
+  background-color: silver; 
+  width: 350px;
+  height: 90vh;
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  overflow: hidden;
+  border-radius: 20px;
+  box-sizing: content-box;
+}
+
+.button {
+  position: absolute;
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; 
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+  z-index: 999;
+  text-align: center; 
+  overflow: hidden; 
+  white-space: normal;
+}

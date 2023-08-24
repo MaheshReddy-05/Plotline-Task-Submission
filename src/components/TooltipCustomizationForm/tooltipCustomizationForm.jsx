@@ -74,7 +74,10 @@ export default function TooltipCustomizationForm({
       ...prevStyle,
       color: newTextColor,
     }));
-    upStyle({ color: newTextColor });
+    upStyle((prevStyle) => ({
+      ...prevStyle,
+      color: newTextColor,
+    }));
   }
   
   function handleBackgroundColor(event) {
@@ -83,7 +86,10 @@ export default function TooltipCustomizationForm({
       ...prevStyle,
       backgroundColor: newBackgroundColor,
     }));
-    upStyle({ backgroundColor: newBackgroundColor });
+    upStyle((prevStyle) => ({
+      ...prevStyle,
+      backgroundColor: newBackgroundColor,
+    }));
   }
   
   function handleCornerRadius(event) {
