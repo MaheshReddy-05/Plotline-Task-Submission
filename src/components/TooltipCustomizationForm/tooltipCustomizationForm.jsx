@@ -13,11 +13,11 @@ export default function TooltipCustomizationForm({
 }) {
   const [isActive, setIsActive] = useState(false);
   const [toolTipsText, setToolTipsText] = useState("");
-  const [textSize, setTextSize] = useState(14);
-  const [padding, setPadding] = useState(5);
+  const [textSize, setTextSize] = useState(10);
+  const [padding, setPadding] = useState(10);
   const [style, setStyle] = useState({});
-  const [cornerRadius, setCornerRadius] = useState(3);
-  const [tooltipWidth, setTooltipWidth] = useState(3);
+  const [cornerRadius, setCornerRadius] = useState(10);
+  const [tooltipWidth, setTooltipWidth] = useState(200);
   const [arrowWidth, setArrowWidth] = useState(3);
   const [arrowHeight, setArrowHeight] = useState(3);
   const options = ["Button 1", "Button 2", "Button 3", "Button 4", "Button 5"];

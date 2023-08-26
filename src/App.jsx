@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import TootTip from "./components/TooltipCustomizationForm/tooltipCustomizationForm";
 import ButtonWithTooltip from './components/ButtonWithTooltip/buttonWithTooltip';
 function App() {
-  const [objNum, setobjNum] = useState(0);
+  const [objNum, setobjNum] = useState(5);
   const [toolTipsText, setToolTipsText] = useState('');
   const [textSize, setTextSize] = useState(14);
   const [padding, setPadding] = useState(5);
   const [style, setStyle] = useState({});
   const [cornerRadius, setCornerRadius] = useState(3);
-  const [tooltipWidth, setTooltipWidth] = useState(3);
+  const [tooltipWidth, setTooltipWidth] = useState(200);
   const [arrowWidth, setArrowWidth] = useState(3);
   const [arrowHeight, setArrowHeight] = useState(3);
 
